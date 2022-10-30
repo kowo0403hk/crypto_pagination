@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Crypto Pagination
+
+This is a pagination and CSS practice project with React and Typescript.
+
+## Video
+
+## Screenshots
+
+Home Page:
+![Home]()
+
+Second Page:
+![Other]()
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
