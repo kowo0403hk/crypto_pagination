@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import { Coins } from "./types";
 import { observer } from "./helpers/IntersectionObserver";
+import CryptoList from "./components/CryptoList";
 
 const App = () => {
   const [coins, setCoins] = useState<Coins[]>([]);
@@ -28,6 +29,7 @@ const App = () => {
   return (
     <div className="app">
       <h1 className="title">Crypto Space</h1>
+      <CryptoList coins={coins} />
     </div>
   );
 };
