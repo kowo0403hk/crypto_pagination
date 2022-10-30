@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 import { Coins } from "./types";
+import { observer } from "./helpers/IntersectionObserver";
 
 const App = () => {
   const [coins, setCoins] = useState<Coins[]>([]);
@@ -13,13 +14,20 @@ const App = () => {
       );
 
       setCoins(data);
+      // give h1 an animation when it's on the screen
+      const title = document.querySelectorAll(".title");
+
+      title.forEach((el) => {
+        observer.observe(el);
+      });
     };
 
     fetchCoins();
   }, []);
+
   return (
     <div className="app">
-      <h1>Crypto Space</h1>
+      <h1 className="title">Crypto Space</h1>
     </div>
   );
 };
