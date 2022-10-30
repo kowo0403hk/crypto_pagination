@@ -7,6 +7,14 @@ import CryptoList from "./components/CryptoList";
 
 const App = () => {
   const [coins, setCoins] = useState<Coins[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(8);
+
+  // posts per page
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+
+  const currentPosts = coins.slice(firstPostIndex, lastPostIndex);
 
   useEffect(() => {
     const fetchCoins = async () => {
@@ -26,10 +34,18 @@ const App = () => {
     fetchCoins();
   }, []);
 
+  useEffect(() => {
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  }, [currentPosts]);
+
   return (
     <div className="app">
-      <h1 className="title">Crypto Space</h1>
-      <CryptoList coins={coins} />
+      <h1 className="title hidden">Crypto Space</h1>
+      <CryptoList coins={currentPosts} />
     </div>
   );
 };

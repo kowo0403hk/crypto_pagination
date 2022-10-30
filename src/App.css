@@ -17,10 +17,15 @@ h1 {
   text-align: center;
   opacity: 0;
   transition: all 2s;
-  height: 22.5vh;
-  padding: 2.5vh 0;
+  height: 17vh;
+  padding: 1.5vh 0;
 }
 
-h1.show {
+.hidden {
+  opacity: 0;
+  transition: all 2s;
+}
+
+.show {
   opacity: 1;
 }
