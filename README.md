@@ -3,6 +3,7 @@
 This is a pagination and CSS practice project with React and Typescript.
 
 ## Video
+https://user-images.githubusercontent.com/79962776/198875680-e8b1c06d-25db-4e0d-95b8-cb021c30421f.mp4
 
 ## Screenshots
 
