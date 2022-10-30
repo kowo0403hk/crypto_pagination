@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.page {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 500ms ease;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid;
+}
+
+.page:hover {
+  opacity: 0.8;
+  color: rgb(95, 220, 67);
+}
+
+.selected {
+  opacity: 0.8;
+  color: rgb(95, 220, 67);
+}

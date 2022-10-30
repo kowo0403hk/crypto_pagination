@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { Coins } from "../../types";
 import "./cryptoList.css";
 import CryptoCard from "../CryptoCard";
-import { observer } from "../../helpers/IntersectionObserver";
 
 interface List {
   coins: Coins[];

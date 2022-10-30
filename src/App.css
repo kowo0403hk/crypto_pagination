@@ -7,18 +7,21 @@
   box-sizing: border-box;
 }
 
+body {
+background-color: #202020;
+color: #FFF;
+}
+
 .app {
-  background-color: #202020;
-  color: #FFF;
-  font-size: 2rem;
+  font-size: 1.25rem;
 }
 
 h1 {
   text-align: center;
   opacity: 0;
   transition: all 2s;
-  height: 17vh;
-  padding: 1.5vh 0;
+  height: 8vh;
+  padding: 1vh 0;
 }
 
 .hidden {
