@@ -7,10 +7,10 @@ This is a pagination and CSS practice project with React and Typescript.
 ## Screenshots
 
 Home Page:
-![Home]()
+![Home](https://github.com/kowo0403hk/crypto_pagination/blob/master/docs/Home.png?raw=true)
 
 Second Page:
-![Other]()
+![Other](https://github.com/kowo0403hk/crypto_pagination/blob/master/docs/Second.png?raw=true)
 
 ## Getting Started with Create React App
 
