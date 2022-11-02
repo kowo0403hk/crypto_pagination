@@ -6,4 +6,28 @@
   flex-wrap: wrap;
   gap: 2vw;
   padding: 4vh 5vw;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.right-enter {
+  opacity: 0;
+  transform: translateX(100%);
+  filter: blur(5);
+}
+
+.right-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  filter: blur(0);
+  transition: all 2s;
+}
+
+.right-exit {
+  opacity: 1;
+}
+
+.right-exit-active {
+  opacity: 0;
+  transition: all 2s;
 }

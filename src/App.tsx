@@ -15,7 +15,10 @@ const App = () => {
   const lastCoinIndex = currentPage * coinsPerPage;
   const firstCoinIndex = lastCoinIndex - coinsPerPage;
 
-  const currentPosts = coins.slice(firstCoinIndex, lastCoinIndex);
+  const currentCoins = coins.slice(firstCoinIndex, lastCoinIndex);
+
+  // // sliding direction based on page
+  const [direction, setDirection] = useState("");
 
   useEffect(() => {
     const fetchCoins = async () => {
@@ -41,17 +44,18 @@ const App = () => {
     cards.forEach((card) => {
       observer.observe(card);
     });
-  }, [currentPosts]);
+  }, [currentCoins]);
 
   return (
     <div className="app">
       <h1 className="title hidden">Crypto Space</h1>
-      <CryptoList coins={currentPosts} />
+      <CryptoList coins={currentCoins} direction={direction} />
       <Pagination
         totalCoins={coins.length}
         coinsPerPage={coinsPerPage}
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
+        setDirection={setDirection}
       />
     </div>
   );

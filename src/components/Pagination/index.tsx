@@ -6,6 +6,7 @@ interface Page {
   coinsPerPage: number;
   currentPage: number;
   setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  setDirection: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Pagination: FC<Page> = ({
@@ -13,6 +14,7 @@ const Pagination: FC<Page> = ({
   coinsPerPage,
   currentPage,
   setCurrentPage,
+  setDirection,
 }: Page) => {
   // generating pages for the pagination
   const pages = [];
@@ -25,6 +27,14 @@ const Pagination: FC<Page> = ({
     e.preventDefault();
     const page = Number(e.currentTarget.innerText);
     setCurrentPage(page);
+
+    if (page > currentPage) {
+      setDirection("right");
+    } else if (page < currentPage) {
+      setDirection("left");
+    } else {
+      setDirection("");
+    }
   };
 
   return (
